@@ -1,0 +1,53 @@
+<style>
+
+    #widget{
+        background-color: red;
+        border: solid 8px yellow;
+        color: yellow;
+        padding: 8px;
+        font-weight: bold;
+        float: left;
+    }
+
+    .clock{
+        background-color: white;
+        border-radius:40%;
+        width: 37px;
+        height: 35px;
+        position: relative;
+    }
+
+    #widget:hover {
+        background-color: yellow;
+    }
+
+    #local {
+        color: white;
+    }
+
+    #vft a{
+        font-size: 11px;
+    }
+</style>
+
+
+
+<div id="widget">
+    <img src="clock.gif"/>
+    <div id="local" class="section">
+        <div id="local-msg"></div>
+    </div>
+    <div id="vft" class="section">
+        <div id="vft-msg"></div>
+        <a href="https://vfa.expert/" id="vfa-link">Courtesy Victorville Film Archive</a>
+    </div>
+
+</div>
+
+<script src="index.js"></script>
+<script type = "text/javascript">
+    window.onload = function(){
+        document.getElementById("local-msg").innerHTML = generateLocalTime()
+        document.getElementById("vft-msg").innerHTML = generateVFTime()
+    }
+</script>
